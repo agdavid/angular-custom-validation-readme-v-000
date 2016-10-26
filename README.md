@@ -25,7 +25,7 @@ function integer() {
 		require: 'ngModel',
 		link: function (scope, element, attrs, ngModel) {
 			ngModel.$validators.integer = function (value) {
-				return value.test(/^\-?\d+$/);
+				return (/^-?\d+$/).test(value);
 			};
 		}
 	}
